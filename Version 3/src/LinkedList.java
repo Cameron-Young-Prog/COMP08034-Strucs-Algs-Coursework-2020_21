@@ -1,4 +1,3 @@
-/* attributes of linked list */
 public class LinkedList {
     private LinkedListNode head;     // root of linked list
 
