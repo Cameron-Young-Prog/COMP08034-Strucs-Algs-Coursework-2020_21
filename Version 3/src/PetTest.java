@@ -1,6 +1,5 @@
 import java.lang.Exception;
 
-
 public class PetTest {
     public static void main(String[] args) throws Exception {
         Pet pet = new Pet();
