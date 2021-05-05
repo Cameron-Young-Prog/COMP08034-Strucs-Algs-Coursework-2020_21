@@ -5,9 +5,6 @@ public class PetTest {
         Pet pet = new Pet();
         Integer option = 0;
         
-
-    
-        
         do {
             System.out.println("0: Quit");
             System.out.println("1: Insert");
@@ -18,8 +15,6 @@ public class PetTest {
             System.out.println("6: Search for product");
             System.out.println("7: Remove a product");
             
-            
-
             try {
                 option = Input.getInteger("option: ");
                 switch (option)  {
@@ -38,7 +33,6 @@ public class PetTest {
                             }
                             }while(Repeat.repeat());
                             break;
-                        
                         
                     
                     case 2:
@@ -83,35 +77,35 @@ public class PetTest {
                     
                         break;
 
-                        case 6:
-                            String animalFind = Input.getString("What animal is the product for: ");
-                            try {
-                                PetNode foundPet = new PetNode();
-                                foundPet = pet.find(animalFind);
-                                String product = Input.getString("Product to search: ");
-                                Boolean found = foundPet.getList().search(foundPet, product);
-                                if (found) {
-                                    System.out.println("'" + product + "'" + " found: " + found);
-                                } else {
-                                    System.out.println("'" + product + "'" + " not found!");
-                                }
-                            } catch (Exception e) {
-                                System.out.println("insert invalid - value not found");
+                    case 6:
+                        String animalFind = Input.getString("What animal is the product for: ");
+                        try {
+                            PetNode foundPet = new PetNode();
+                            foundPet = pet.find(animalFind);
+                            String product = Input.getString("Product to search: ");
+                            Boolean found = foundPet.getList().search(foundPet, product);
+                            if (found) {
+                                System.out.println("'" + product + "'" + " found: " + found);
+                            } else {
+                                System.out.println("'" + product + "'" + " not found!");
                             }
+                        } catch (Exception e) {
+                            System.out.println("insert invalid - value not found");
+                        }
                         
                         break;
 
-                        case 7:
-                            String animalRemove = Input.getString("What animal is the product for: ");
-                            try {
-                                PetNode foundPet = new PetNode();
-                                foundPet = pet.find(animalRemove);
-                                String product = Input.getString("Product to remove: ");
-                                foundPet.getList().remove(foundPet, product);
-                                System.out.println("'" + product + "'" + " has been removed!");
-                            }catch (Exception e) {
-                                System.out.println("insert invalid - value not found");
-                            }
+                    case 7:
+                        String animalRemove = Input.getString("What animal is the product for: ");
+                        try {
+                            PetNode foundPet = new PetNode();
+                            foundPet = pet.find(animalRemove);
+                            String product = Input.getString("Product to remove: ");
+                            foundPet.getList().remove(foundPet, product);
+                            System.out.println("'" + product + "'" + " has been removed!");
+                        }catch (Exception e) {
+                            System.out.println("insert invalid - value not found");
+                        }
                         break;
                             
                         
@@ -122,22 +116,11 @@ public class PetTest {
                                
             }
 
-
-
             } catch (Exception e) {
                 System.out.println("insert invalid - value not unique");
             }
-            
-
-            
-                
-
                 
     } while (option != 0);
-        
-
-    
-        
+            
     }
-    
 }
