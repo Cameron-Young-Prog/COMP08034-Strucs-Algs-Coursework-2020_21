@@ -87,8 +87,12 @@ public class PetTest {
                             foundPet = pet.find(animalFind);
                             String product = Input.getString("Product to search: ");
                             Boolean found = foundPet.getList().search(foundPet, product);
+                            Integer quantity = 50;
+                            char c=product.charAt(0);//returns h 
                             if (found) {
                                 System.out.println("'" + product + "'" + " found: " + found);
+                                System.out.println("Quantity: " + quantity);
+                                System.out.println("Product Code: "+ c + "001");
                             } else {
                                 System.out.println("'" + product + "'" + " not found!");
                             }
